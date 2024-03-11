@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🆂🅾🆁🆃🅸🅵🆈</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.jpg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Caveat:wght@700&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Lugrasimo&family=Moirai+One&family=Nova+Square&family=Passions+Conflict&family=Philosopher&family=Rubik+Wet+Paint&family=Sacramento&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <h1 style="font-size: 75px; font-weight: bold; background-color: rgb(28, 21, 21); color: rgb(240, 230, 230); text-align: center; padding:15px;">🆂 🅾 🆁 🆃 🅸 🅵 🆈</h1>
+    
+    
+
+    <header>
+       
+        <nav>
+            <div class="array-inputs">
+                <button id="a_generate">Generate New Array</button>
+                <div class="input-group">
+                    <p>Size of array:</p>
+                    <input id="a_size" type="range" min="10" max="200" step="1" value="80">
+                </div>
+                <div class="input-group">
+                    <p>Speed of algorithm:</p>
+                    <input id="a_speed" type="range" min="1" max="10" step="1" value="4">
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+                <div class="algos">
+                    <button >Bubble</button>
+                    <button >Selection</button>
+                    <button >Insertion</button>
+                    <button >Merge</button>
+                    <button >Quick</button>
+                    <button style="margin-right: 0px;">Heap</button>
+                </div>
+            
+
+       
+    <section>
+
+        <div id="Info_Cont1">
+
+            <h3 >TIME COMPLEXITY</h3>
+
+            <div class="Complexity_Containers" id="Time_Complexity_Types_Container">
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Time_Worst"></p>
+                </div>
+                
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Average case:</p>
+                    <p id="Time_Average"></p>
+                </div>
+                
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Best case:</p>
+                    <p id="Time_Best"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="array_container">
+            
+        </div>
+
+        <div id="Info_Cont2">
+
+            <h3 >SPACE COMPLEXITY</h3>
+
+            <div class="Complexity_Containers" id="Space_Complexity_Types_Container">
+
+                <div class="Pair_Definitions">
+                    <p class="Sub_Heading">Worst case:</p>
+                    <p id="Space_Worst"></p>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+    <footer>
+    </footer>
+    <script src="./scripts/main.js"></script>  
+    <script src="./scripts/visualizations.js"></script>
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,140 +8,88 @@
 }
 
 body {
-  background-color: #fcf8f8;
   color: rgb(6, 10, 6);
 }
 
+h1 {
+  font-size: 75px;
+  font-weight: bold;
+  background-color: #191210;
+  color: rgb(240, 230, 230);
+  text-align: center;
+  padding: 10px;
+  text-shadow: 3px 3px 3px #504a4b;
+}
 
 nav {
-  display: flex;
-  justify-content: space-between; /* Push items to the sides */
-  align-items: center;
-  width: 96%; 
-  background-color: #f00f0f;
-  color: white;/* Ensure the nav bar spans the full width */
+  display: grid;
+  place-items: center;
+  color: #e5e4e2;
   padding: 25px;
 }
 
 .array-inputs {
-  display: flex; /* Make the container a flexbox */
-  justify-content: flex-end;
-  overflow: hidden;/* Align items to the right */
+  display: flex;
+  padding: 25px;
+  background-color: #413839;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-
 .array-inputs button {
-  margin-right: 200px;
   height: 90px;
-  overflow: hidden; /* Adjust margin as needed */
 }
 
 .input-group {
   display: flex;
   align-self: center;
-  width: 300px;
+  max-width: 350px;
+  padding: 10px 20px;
 }
 
 .input-group p {
-  margin-right: 10px;
-}
-
-
-
-nav .array-inputs #a_size,
-nav .array-inputs #a_speed {
-  padding: 1% 1%;
+  margin-right: 5px;
 }
 
 nav .array-inputs #a_generate {
-  background-color: rgb(252, 252, 251);
-  color: rgba(12, 6, 6, 0.057);
+  color: #e5e4e2;
   transition: color 0.3s ease;
-  text-align: center;
+  width: 300px;
+  height: 55px;
+  font-size: 20px;
+  padding: 0 15px;
+  background-color: transparent;
   border-radius: 10px;
-  padding: 20px;
-  color: black;
 }
 
 nav .array-inputs #a_generate:hover {
   cursor: pointer;
-  color: #f3f0f0;
-}
-
-nav .header_right {
-  display: flex;
-  flex-direction: column;
-}
-
-nav .header_right .nav-heading {
-  display: inline-block;
-  font-size: xx-large;
-  padding: 1% 0%;
-}
-
-nav .header_right .algos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  place-content: center;
-  padding: 1% 0%;
-}
-
-nav .header_right .algos button {
-  background-color: transparent;
-  border: none;
-  color: white;
-  outline: none;
-  padding: 2% 0%;
-  font-size: large;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav .header_right .algos button:hover {
-  background-color: #ed4d0d;
-  color: #fff;
-  cursor: pointer;
+  background-color: #f00f0f;
 }
 
 .algos {
   margin-top: 20px;
   display: flex;
-  justify-content: center; /* Center the buttons horizontally */
+  justify-content: center;
+  border: 1px solid black;
 }
 
 .algos button {
-  margin: 5px; /* Add some spacing between buttons */
-  padding: 10px 20px; /* Set initial padding */
-  font-size: 16px; /* Set initial font size */
-  transition: padding 0.3s, font-size 0.3s, height 0.3s; /* Smooth transition effect */
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: padding 0.3s, font-size 0.3s, height 0.3s;
   border-radius: 5px;
-  border:#f00f0f;
+  border: #f00f0f;
 }
 
 .algos button:hover,
 .algos button:focus {
-  padding: 12px 20px; /* Increase vertical padding on hover */
-  height: 44px; /* Increase height on hover */
-  font-size: 18px; /* Increase font size on hover */
+  padding: 12px 20px;
+  height: 44px;
+  font-size: 18px;
   background-color: #f00f0f;
-  color: #fff;
-}
-
-.algos button:hover + button,
-.algos button:focus + button {
-  padding: 10px 20px; /* Reset padding for adjacent sibling buttons */
-  height: auto; /* Reset height for adjacent sibling buttons */
-  font-size: 16px; /* Reset font size for adjacent sibling buttons */
-}
-
-
-
-nav .header_right .algos .butt_locked,
-nav .header_right .algos .butt_locked:hover {
-  cursor: not-allowed;
-}
-
-nav .header_right .algos .butt_selected {
-  background-color: #12d1b1;
   color: #fff;
 }
 
@@ -154,50 +103,129 @@ section .Complexity_Containers .Pair_Definitions {
   margin-top: 10%;
 }
 
-section .Complexity_Containers .Pair_Definitions p {
-  display: inline;
-}
-
-section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
-  font-size: medium;
-  text-transform: none;
-}
-
 section #Info_Cont1,
 section #Info_Cont2 {
   padding: 5% 5%;
-}
-
-section #Info_Cont1 h3,
-section #Info_Cont2 h3 {
-  font-family: "Rubik Wet Paint", system-ui;
-  font-weight: 400;
-  font-style: normal;
 }
 
 #array_container {
   display: flex;
   width: 100%;
   height: 150%;
-  display: flex;
   justify-content: center;
   align-items: flex-end;
 }
-
-.hide {
-  display: none;
+article{
+  height: 450px;
 }
+hr{
+  border:1px solid black;
+}
+/* Responsive Design */
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 60px;
+  }
 
-@media only screen and (max-width: 768px) {
   nav {
-    padding: 15px; /* Adjust padding as needed */
+    padding: 15px;
+    display: flex;
+    align-items: start;
   }
 
-  .array-inputs button {
-    margin-right: 5px; /* Adjust margin as needed */
+  .array-inputs {
+    border-radius: 0 10px 10px 0;
+    position: relative;
+    left: -2.5%;
+    padding: 15px 20px;
+  }
+  nav .array-inputs #a_generate{
+    width: 300px;
+    font-size: 16px;
+  }
+  .input-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .input-group p{
+    font-size: 16px;
+  }
+  article{
+    height: 600px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: row;
+    gap:0.5%;
+    border: 1px solid black;
+    margin: 0 0 2% 0;
+    background-color: #000;
+  }
+  .algos {
+    display: flex;
+    flex-direction: column;
+    height: 90%; 
+    width: 300px; 
+    background-color: #191210;
+    padding-top: 20px;
+    align-items: center;
+    border-radius: 0 50px 50px 0;
   }
 
-  .input-group p {
-    margin-right: 5px; /* Adjust margin as needed */
+  .algos button {
+    margin: 10px 0;
+    padding: 15px 20px;
+    font-size: 14px;
+    width: 90%;
+    border: none;
+    background-color: transparent;    
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 50px;
+  }
+
+  .algos button:hover {
+    background-color: #f00f0f;
+  }
+
+  section {
+    width: 80%; 
+    color: white; 
+  }
+  section #Info_Cont1{
+    width: 265px;
+    height: 160px;
+    position: relative;
+    top: 68%;
+    padding-left: 10%;
+    left: 7%;
+    border-radius: 10px;
+    background:linear-gradient(to left,transparent 10%,#f00f0f);
+  }
+  section #Info_Cont1 p,section #Info_Cont2 p{
+    font-size: 16px;
+  }
+  section .Complexity_Containers .Pair_Definitions{
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+  }
+  section #Info_Cont2{
+    width: 265px;
+    height: 160px;
+    position: relative;
+    top: 68%;
+    left: -149%;
+    padding-left: 10%;
+    border-radius: 10px;
+    background:linear-gradient(to left,transparent 10%,#f00f0f);
+  }
+  #array_container{
+    height: 63%;
+    width: 570px;
+    border: 1px solid black;
+    position: relative;
+    left: -30%;
+    top: 3.5%;
   }
 }
